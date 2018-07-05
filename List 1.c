@@ -1,9 +1,4 @@
 #include <stdio.h>
-#define ex2
-
-//=========================================
-//============== LIST 1 ===================
-#include <stdio.h>
 #define ex6
 
 //=========================================
@@ -196,6 +191,8 @@ int n1,n2,res;
 char op;
 
 do{
+printf("|| EX. 6 ||\n");
+printf("===========\n\n");
 printf("Enter the first number.\n");
     scanf("%i", &n1);
 printf("Enter the second number.\n");

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define ex6
+#define ex10
 
 //=========================================
 //============== LIST 1 ===================
@@ -38,7 +38,7 @@ printf("\nRepeat? Y for Yes, any for No\n");
     scanf(" %c", &op);
 system("cls");
 } while (op=='Y' || op=='y');
-printf("\nThanks!\n");
+printf("Thanks!\n\n");
 
 system("pause");
 
@@ -132,7 +132,7 @@ printf("\nRepeat? Y for Yes, any for No\n");
     scanf(" %c", &op);
 system("cls");
 } while (op=='Y' || op=='y');
-printf("\nThanks!\n");
+printf("Thanks!\n\n");
 
 system("pause");
 }
@@ -167,7 +167,7 @@ printf("\nRepeat? Y for Yes, any for No\n");
     scanf(" %c", &op);
 system("cls");
 } while (op=='Y' || op=='y');
-printf("\nThanks!\n");
+printf("Thanks!\n\n");
 
 system("pause");
 
@@ -211,7 +211,7 @@ printf("\nRepeat? Y for Yes, any for No\n");
     scanf(" %c", &op);
 system("cls");
 } while (op=='Y' || op=='y');
-printf("\nThanks!\n");
+printf("Thanks!\n\n");
 
 system("pause");
 
@@ -220,3 +220,179 @@ system("pause");
 #endif // ex6
 
 /*==================================================================*/
+
+#ifdef ex7
+int main (){
+int birth, today, old, fut;
+
+char op;
+do{
+printf("|| EX. 7 ||\n");
+printf("===========\n\n");
+
+printf("Enter your birth year: \n");
+    scanf("%i", &birth);
+printf("Enter today's year: \n");
+    scanf("%i", &today);
+
+old=today-birth;
+
+printf("\nYou are %i years old, or almost it.\n", old);
+
+fut=2020-birth;
+
+printf("And in 2020 you'll be %i years old.", fut);
+
+
+printf("\n==============================================\n");
+printf("\nRepeat? Y for Yes, any for No\n");
+    scanf(" %c", &op);
+system("cls");
+} while (op=='Y' || op=='y');
+printf("Thanks!\n\n");
+
+system("pause");
+
+}
+#endif // ex7
+
+/*==================================================================*/
+
+#ifdef ex8
+
+int main(){
+float n1, n2, res;
+
+char op;
+do{
+printf("|| EX. 8 ||\n");
+printf("===========\n\n");
+
+printf("Enter the 1st number:\n");
+    scanf("%f", &n1);
+printf("Enter the 2nd number:\n");
+    scanf("%f", &n2);
+
+res = n1*n2;
+
+printf("\n==============================================\n");
+printf("The product of %.2f * %.2f is equal to %.2f", n1, n2, res);
+
+printf("\n==============================================\n");
+printf("\nRepeat? Y for Yes, any for No\n");
+    scanf(" %c", &op);
+system("cls");
+} while (op=='Y' || op=='y');
+printf("Thanks!\n\n");
+
+system("pause");
+
+
+}
+#endif // ex8
+
+/*==================================================================*/
+
+#ifdef ex9
+
+int main(){
+float fac, dis, tax;
+
+char op;
+do{
+printf("|| EX. 9 ||\n");
+printf("===========\n\n");
+printf("Enter the vehicle's factory value:\n$ ");
+    scanf("%f", &fac);
+printf("Enter the distributor's %% profit:\n");
+    scanf("%f", &dis);
+printf("Enter the tax %%: \n");
+    scanf("%f", &tax);
+
+dis=fac*(dis/100);
+tax=fac*(tax/100);
+
+printf("\n========================================================\n");
+printf("Distributor's profit: $ %.2f\n", dis);
+printf("Vehicle's taxes: $ %.2f\n", tax);
+printf("TOTAL (Vehicle + Distributor + Tax): $ %.2f", fac+dis+tax);
+
+printf("\n========================================================\n");
+printf("\nRepeat? Y for Yes, any for No\n");
+    scanf(" %c", &op);
+system("cls");
+} while (op=='Y' || op=='y');
+printf("Thanks!\n\n");
+
+system("pause");
+
+}
+#endif // ex9
+
+/*==================================================================*/
+
+#ifdef ex10
+
+/*                            Weight
+     Height
+                  <= 60 kg   >=60 <=90     >90
+< 1.20          |     A    |     D     |    G    |
+> 1.20 < 1.70   |     B    |     E     |    H    |
+> 1.70          |     C    |     F     |    I    |
+*/
+
+int main(){
+float h, w;
+
+char op;
+do{
+printf("|| EX. 10 ||\n");
+printf("============\n\n");
+printf("Height(m): \n");
+    scanf("%f", &h);
+printf("\nWeight(Kg): \n");
+    scanf("%f", &w);
+if(h<1.20 && w<=60){
+    printf("\n===========================\n");
+    printf("Category: A");
+} else if(h<1.20 && w>60 && w<=90){
+        printf("\n===========================\n");
+        printf("Category: D");
+    } else if(h<1.20 && w>90){
+            printf("\n===========================\n");
+            printf("Category: G");
+            }
+if(h>=1.20 && h<=1.70 && w<=60){
+    printf("\n===========================\n");
+    printf("Category: B");
+} else if(h>=1.20 && h<=1.70 && w>60 && w<=90){
+        printf("\n===========================\n");
+        printf("Category: E");
+    } else if(h>=1.20 && h<=1.70 && w>90){
+            printf("\n===========================\n");
+            printf("Category: H");
+            }
+if(h>1.70 && w<=60){
+    printf("\n===========================\n");
+    printf("Category: C");
+} else if(h>1.70 && w>60 && w<=90){
+        printf("\n===========================\n");
+        printf("Category: F");
+    } else if(h>1.70 && w>90){
+            printf("\n===========================\n");
+            printf("Category: I");
+            }
+
+
+printf("\n===========================\n");
+printf("\nRepeat? Y for Yes, any for No\n");
+    scanf(" %c", &op);
+system("cls");
+} while (op=='Y' || op=='y');
+printf("Thanks!\n\n");
+
+system("pause");
+
+}
+
+#endif // ex10

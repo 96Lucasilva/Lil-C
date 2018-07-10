@@ -396,3 +396,5 @@ system("pause");
 }
 
 #endif // ex10
+
+/* 400! */

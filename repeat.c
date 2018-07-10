@@ -1,3 +1,4 @@
+char op;
 do{
 
 

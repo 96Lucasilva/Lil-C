@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define ex1
+#define ex8
 
 //=========================================
 //============== LIST 2 ===================
@@ -139,6 +139,8 @@ int k, cont, n1;
 
 char op;
 do{
+printf("|| EX. 4 ||\n");
+printf("===========\n\n");
 int neg=0, zero=0;
 printf("|| EX. 4 ||\n");
 printf("===========\n\n");
@@ -180,11 +182,106 @@ float k;
 
 char op;
 do{
+printf("|| EX. 5 ||\n");
+printf("===========\n\n");
 float weight=0;
 
 printf("How many weights? ");
     scanf("%i", &n);
-for(cont=0; cont<n; cont++)
+for(cont=0; cont<n; cont++){
+    printf("%i weight: ", cont+1);
+        scanf("%f", &k);
+        weight=weight+k;
+}
+printf("\n==============================================\n");
+printf("The average weight is: %.2f", weight/n);
+
+
+printf("\n==============================================\n");
+printf("\nRepeat? Y for Yes, any for No\n");
+    scanf(" %c", &op);
+system("cls");
+} while (op=='Y' || op=='y');
+printf("Thanks!\n\n");
+
+system("pause");
+}
+#endif // ex5
+
+/*==================================================================*/
+
+#ifdef ex6
+int main(){
+int cont, k;
+
+char op;
+do{
+printf("|| EX. 6 ||\n");
+printf("===========\n\n");
+int sum=0;
+printf("How many numbers? ");
+    scanf("%i", &k);
+printf("\n");
+for(cont=0; cont<=k; cont++){
+    printf("%i ", cont);
+    sum=sum+cont;
+}
+printf("\n\n==============================================\n");
+printf("Sum of %i numbers: %i", k, sum);
+
+
+printf("\n==============================================\n");
+printf("\nRepeat? Y for Yes, any for No\n");
+    scanf(" %c", &op);
+system("cls");
+} while (op=='Y' || op=='y');
+printf("Thanks!\n\n");
+
+system("pause");
+}
+#endif // ex6
+
+/*==================================================================*/
+
+#ifdef ex7
+int main(){
+
+char op;
+do{
+float n1, cont, k=0, bigger=0, lowest=3.4E+38, average=0, cavg=0, cbigger=0;
+printf("|| EX. 7 ||\n");
+printf("===========\n\n");
+
+printf("How many peoples? ");
+    scanf("%f", &n1);
+for (cont=0; cont<n1; cont++){
+    printf("%.f weight: ", cont+1);
+        scanf("%f", &k);
+
+        if(k>bigger){
+            bigger=k;
+        }
+        if (k<lowest){
+            lowest=k;
+        }
+        if (k>=70 && k<=85.5){
+            average=average+k;
+            cavg=cavg+1;
+        }
+        if (k>75){
+            cbigger=cbigger+1;
+        }
+}
+
+printf("\n==============================================\n");
+printf("\nWeight quantity between 75kg and 85.5kg: %.f\n", cavg);
+if(cavg>=1){
+    printf("Average weight between 70kg and 85.5kg is: %.2f\n", average/cavg);
+}
+printf("Weights bigger than 75kg: %.f\n", cbigger);
+printf("Heavier: %.2f\n", bigger);
+printf("Lighter: %.2f\n", lowest);
+
 
 
 
@@ -198,7 +295,14 @@ printf("Thanks!\n\n");
 system("pause");
 
 }
+#endif // ex7
+
+/*==================================================================*/
+
+#ifdef ex8
+int main(){
 
 
-#endif // ex5
+}
 
+#endif // ex8

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define ex8
+#define ex1
 
 //=========================================
 //============== LIST 2 ===================
@@ -300,9 +300,72 @@ system("pause");
 /*==================================================================*/
 
 #ifdef ex8
+/* FIBONACCI */
 int main(){
+
+char op;
+do{
+int a=0, b=1, c=a+b, k, cont;
+printf("|| EX. 7 ||\n");
+printf("===========\n\n");,
+
+printf("Cicles: ");
+printf("\n");
+    scanf("%i", &k);
+printf("\n==============================================\n");
+for (cont=0; cont<k; cont++){
+    printf("%i ", c);
+    c=a+b;
+    a=b;
+    b=c;
+}
+printf("\n==============================================\n");
+printf("\nRepeat? Y for Yes, any for No\n");
+    scanf(" %c", &op);
+system("cls");
+} while (op=='Y' || op=='y');
+printf("Thanks!\n\n");
+
+system("pause");
+
+}
+#endif // ex8
+
+/*==================================================================*/
+
+#ifdef ex9
+int main(){
+char op;
+do{
+int k, cont, aux=1;
+
+printf("Factorial of: ");
+    scanf("%i", &k);
+
+printf("\n==============================================\n");
+printf("%i! = ", k);
+if (k==0 || k==1){
+    printf("1");
+    goto menu;
+}
+for (cont=k; cont>0; cont--){
+    printf("%i*", cont);
+    aux=aux*cont;
+}
+printf(" = %i", aux);
+
+menu:
+printf("\n==============================================\n");
+printf("\nRepeat? Y for Yes, any for No\n");
+    scanf(" %c", &op);
+system("cls");
+} while (op=='Y' || op=='y');
+printf("Thanks!\n\n");
+
+system("pause");
 
 
 }
 
-#endif // ex8
+#endif // ex9
+
